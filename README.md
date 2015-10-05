@@ -6,3 +6,17 @@
     <li>Quick Sort</li>
     <li>Merge Sort</li>
 </ul>
+<h2>Graph</h2>
+<ul>
+    <li>Presentation</li>
+        <ul>
+            <li>Adjacency list</li>
+            <li>Matrix</li>
+        </ul>
+    <li>Dijstra</li>
+        <ul>
+            <li>Matrix</li>
+            <li>Max heap</li>
+        </ul>
+</ul>
+
