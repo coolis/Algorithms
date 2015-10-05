@@ -19,4 +19,7 @@
             <li>Max heap</li>
         </ul>
 </ul>
-
+<h2>Collection</h2>
+<ul>
+    <li>Circular Queue</li>
+</ul>
