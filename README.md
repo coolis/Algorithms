@@ -22,4 +22,5 @@
 <h2>Collection</h2>
 <ul>
     <li>Circular Queue</li>
+    <li>Queue</li>
 </ul>

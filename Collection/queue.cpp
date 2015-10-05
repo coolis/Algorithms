@@ -1,50 +1,54 @@
 #include<iostream>
-#include<vector>
 
 using namespace std;
 
 template <class T>
+struct Node {
+    T v;
+    Node<T> *next;
+    Node(T t) : v(t), next(NULL) {}
+};
+
+template <class T>
 class Queue {
 public:
-    Queue(int s) : size(s), front(0), count(0) {
-        contents.reserve(size);
+    Queue() {
+        start = new Node<T>(NULL);
+        end = start;
     }
 
     void push(T v) {
-        if (count == size) return;
-        contents[(front+count)%size] = v;
-        count++;
+        end->next = new Node<T>(v);
+        end = end->next;
     }
 
     void pop() {
-        if (count == 0) return;
-        front = (front+1)%size;
-        count--;
+        Node<T>* tmp = start->next;
+        if (tmp) {
+            start->next = tmp->next;
+            free(tmp);
+        }
     }
 
     T front() {
-        return contents[front];
+        if (start->next)
+            return start->next->v;
+        else
+            return NULL;
     }
-
 private:
-    vector<T> contents;
-    int size, front, count;
+    Node<T> *start, *end;
 };
 
 int main() {
-
-    Queue<int> queue(4);
-    queue.push(1);
-    queue.push(2);
-    queue.push(3);
-    queue.push(4);
-
-    cout << queue.front() << endl;
-
-    queue.pop();
-    queue.push(5);
-    cout << queue.front() << endl;
+    Queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3); 
+    cout << q.front() << endl;
+    q.pop();
+    cout << q.front() << endl;
 
 
-    return 0;    
+    return 0;
 }
