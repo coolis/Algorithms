@@ -23,4 +23,5 @@
 <ul>
     <li>Circular Queue</li>
     <li>Queue</li>
+    <li>Disjoint Set</li>
 </ul>
