@@ -25,6 +25,7 @@
 <ul>
     <li>Circular Queue</li>
     <li>Queue</li>
+    <li>Stack</li>
     <li>Disjoint Set</li>
     <li>Trie Tree</li>
     <li>Binary Search Tree</li>
