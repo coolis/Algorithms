@@ -27,4 +27,5 @@
     <li>Queue</li>
     <li>Disjoint Set</li>
     <li>Trie Tree</li>
+    <li>Binary Search Tree</li>
 </ul>
