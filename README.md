@@ -19,6 +19,7 @@
             <li>Max heap</li>
         </ul>
     <li>Depth First Search</li>
+    <li>Breadth First Search</li>
 </ul>
 <h2>Collection</h2>
 <ul>
