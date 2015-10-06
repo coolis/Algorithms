@@ -26,4 +26,5 @@
     <li>Circular Queue</li>
     <li>Queue</li>
     <li>Disjoint Set</li>
+    <li>Trie Tree</li>
 </ul>
