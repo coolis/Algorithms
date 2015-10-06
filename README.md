@@ -18,6 +18,7 @@
             <li>Matrix</li>
             <li>Max heap</li>
         </ul>
+    <li>Depth First Search</li>
 </ul>
 <h2>Collection</h2>
 <ul>
