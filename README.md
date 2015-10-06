@@ -28,4 +28,5 @@
     <li>Disjoint Set</li>
     <li>Trie Tree</li>
     <li>Binary Search Tree</li>
+    <li>Heap</li>
 </ul>
