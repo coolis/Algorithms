@@ -17,9 +17,9 @@ public:
                 right = new BSTNode(v);
             } else {
                 right->insert(v);
-            }
-        }
-    }
+            }   
+        }   
+    }   
 
     bool search(int v) {
         if (v < val) {
@@ -34,8 +34,8 @@ public:
                 return right->search(v);
         } else {
             return true;
-        }
-    }
+        }   
+    }   
 
     void remove(int v, BSTNode *parent) {
         if (v < val) {
@@ -43,37 +43,36 @@ public:
                 return;
             } else {
                 left->remove(v, this);
-            }
+            }   
         } else if (v > val) {
             if (right == NULL) {
                 return;
             } else {
                 right->remove(v, this);
-            }
+            }   
         } else {
             if (left != NULL && right != NULL) {
-                val = minValue();
-                right->remove(val, this);
+                val = left->maxValue();
+                left->remove(val, this);
             } else if (parent->left == this) {
                 parent->left = left ? left : right;
             } else if (parent->right == this) {
                 parent->right = left ? left : right;
-            }
-        }
-    }
+            }   
+        }   
+    }   
 
-    int minValue() {
-        if (left == NULL) {
+    int maxValue() {
+        if (right == NULL) {
             return val;
         } else {
-            return left->minValue();
-        }
-    }
+            return right->maxValue();
+        }   
+    }   
 
     int val;
     BSTNode *left, *right;
 };
-
 
 int main() {
     
@@ -84,6 +83,8 @@ int main() {
     root->left->right = new BSTNode(3);
     root->right->left = new BSTNode(9);
     root->right->right = new BSTNode(21);
+    root->right->left->left = new BSTNode(7);
+    root->right->left->right = new BSTNode(11);
     root->right->right->left = new BSTNode(19);
     root->right->right->right = new BSTNode(25);
 
